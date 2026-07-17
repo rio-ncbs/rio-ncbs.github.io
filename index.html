@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Integrity Office</title>
+  <meta name="description" content="Research Integrity Office — upholding honesty, rigor and trust in research." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Public+Sans:wght@400;600;700&family=Baloo+2:wght@800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Research Integrity Office — home">
+        <span class="logo" aria-hidden="true">
+          <span class="l-r">R</span>
+          <svg class="l-nib" viewBox="0 0 40 68" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="9" y="0" width="22" height="12" rx="2" fill="#ec8b2d"/>
+            <path d="M9 16 h22 c0 16 -4.5 25 -11 37 C13.5 41 9 32 9 16 Z" fill="#ec8b2d"/>
+            <circle cx="20" cy="30" r="4.2" fill="#ffffff"/>
+            <path d="M20 34.5 V49" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+          </svg>
+          <span class="l-o">O</span>
+        </span>
+        <span class="brand-name">Research<br />Integrity Office</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" class="active">Home</a>
+        <a href="team.html">RIO Team</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a href="resources.html">Resources</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO =================
+       Left: intro copy (EDIT ME — placeholder text below).
+       Right: the pediment with hanging research-integrity
+       words. Hover to part them, click a word for its story.
+       The words + popup text live in js/hero.js.
+  ============================================ -->
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">Office of Research Integrity</span>
+
+      <!-- EDIT ME: headline -->
+      <h1 class="hero-title">
+        Research <span class="dash">—</span> built on
+        <em>honesty</em>, held by <em>trust</em>
+      </h1>
+
+      <!-- EDIT ME: intro paragraph -->
+      <p class="hero-sub">
+        [ Your one-paragraph introduction to the Research Integrity Office
+        goes here — who we are, what we safeguard, and how we support
+        researchers across the institution. ]
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#about">About the Office</a>
+        <a class="btn btn-ghost" href="resources.html">Explore Resources</a>
+      </div>
+    </div>
+
+    <div class="hero-stage" id="hero-stage">
+      <canvas id="hero-canvas" aria-label="Interactive curtain of research integrity principles hanging from an academic pediment. Click a word to learn its history."></canvas>
+    </div>
+
+    <div class="hero-hint">Move through the words · <b>click one</b> to read its story</div>
+  </section>
+
+  <!-- ================= WORD POPUP ================= -->
+  <div class="modal-backdrop" id="word-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">✕</button>
+      <p class="modal-kicker" id="modal-kicker"></p>
+      <h3 id="modal-title"></h3>
+      <div class="modal-rule"></div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ================= ABOUT / INTRO =================
+       EDIT ME: replace the .placeholder blocks with your
+       introduction content.
+  ================================================== -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Introduction</span>
+        <h2 class="section-title">About the Research Integrity Office</h2>
+        <p class="section-desc">[ One-line summary of the office — replace me. ]</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="placeholder tall reveal">
+          <strong>Intro · Column one</strong>
+          Add your mission statement and an overview of what the
+          Research Integrity Office does.
+        </div>
+        <div class="placeholder tall reveal">
+          <strong>Intro · Column two</strong>
+          Add your mandate, reporting lines, policies you administer,
+          or a message from the Research Integrity Officer.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPLORE THE SITE ================= -->
+  <section class="section tint">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Explore</span>
+        <h2 class="section-title">Inside the Office</h2>
+      </div>
+
+      <div class="grid-4">
+        <a class="explore-card reveal" href="team.html">
+          <div class="card-num">01 —</div>
+          <h3>RIO Team</h3>
+          <p>[ Who we are — the people behind the office. ]</p>
+          <span class="card-go">Meet the team →</span>
+        </a>
+        <a class="explore-card reveal" href="newsletter.html">
+          <div class="card-num">02 —</div>
+          <h3>Newsletter</h3>
+          <p>[ Periodic updates on integrity, policy and practice. ]</p>
+          <span class="card-go">Read issues →</span>
+        </a>
+        <a class="explore-card reveal" href="resources.html">
+          <div class="card-num">03 —</div>
+          <h3>Resources</h3>
+          <p>[ Guidelines, policies, training and tools. ]</p>
+          <span class="card-go">Browse resources →</span>
+        </a>
+        <a class="explore-card reveal" href="news.html">
+          <div class="card-num">04 —</div>
+          <h3>News</h3>
+          <p>[ Announcements and events from the office. ]</p>
+          <span class="card-go">See what’s new →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT STRIP (placeholder) ================= -->
+  <section class="section">
+    <div class="wrap">
+      <div class="subscribe-box reveal">
+        <div>
+          <h3>Questions or concerns about research integrity?</h3>
+          <p>[ Add how to reach the office — email, phone, office hours,
+             and how to raise a concern confidentially. ]</p>
+        </div>
+        <div class="placeholder small" style="background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.3); color:#bcd8c4;">
+          <strong style="color:#fff;">Contact block</strong>
+          Replace with contact details / a contact button.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <span class="logo" aria-hidden="true">
+          <span class="l-r">R</span>
+          <svg class="l-nib" viewBox="0 0 40 68" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="9" y="0" width="22" height="12" rx="2" fill="#ec8b2d"/>
+            <path d="M9 16 h22 c0 16 -4.5 25 -11 37 C13.5 41 9 32 9 16 Z" fill="#ec8b2d"/>
+            <circle cx="20" cy="30" r="4.2" fill="#ffffff"/>
+            <path d="M20 34.5 V49" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+          </svg>
+          <span class="l-o">O</span>
+        </span>
+        <p style="font-size:.88rem; max-width:34ch; margin-top:14px;">
+          [ Institution name and a one-line description of the office. ]
+        </p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <a href="team.html">RIO Team</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a href="resources.html">Resources</a>
+        <a href="news.html">News</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="#">[ email@institution.edu ]</a>
+        <a href="#">[ +00 000 000 0000 ]</a>
+        <a href="#">[ Office address ]</a>
+      </div>
+      <div class="footer-note">
+        <span>© <span id="year"></span> Research Integrity Office. All rights reserved.</span>
+        <span>[ Institution / accessibility / privacy links ]</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/site.js"></script>
+  <script src="js/hero.js"></script>
+</body>
+</html>
