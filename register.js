@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (it.org) {
           html += `<button type="button" data-kind="cr" data-i="${i}">${esc(it.title)} <span class="sugg-org">· ${esc(it.publisher)} → ${it.org}</span></button>`;
         } else {
-          html += `<span class="sugg-note">${esc(it.title)} · published by ${esc(it.publisher)} — not yet in the register. <a href="mailto:rio@ncbs.res.in?subject=${encodeURIComponent("Add " + it.title + " to the AI policy register")}">Ask the office to add it</a>.</span>`;
+          html += `<span class="sugg-note">${esc(it.title)} · published by ${esc(it.publisher)}, not yet in the register. <a href="mailto:rio@ncbs.res.in?subject=${encodeURIComponent("Add " + it.title + " to the AI policy register")}">Ask the office to add it</a>.</span>`;
         }
       });
     }
