@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Newsletter · Research Integrity Office · NCBS</title>
+<title>Policy Comparison Table · Research Integrity Office · NCBS</title>
+<meta name="description" content="The major publishers' and journals' AI policies side by side: writing, authorship, images and peer review.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,9 +18,9 @@
     <button class="menu-toggle" aria-label="Open menu">Menu</button>
     <nav class="menu">
       <a href="index.html">Home</a>
-      <a href="resources.html">Resources</a>
+      <a href="resources.html" class="active">Resources</a>
       <a href="events.html">Events</a>
-      <a href="newsletter.html" class="active">Newsletter</a>
+      <a href="newsletter.html">Newsletter</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
@@ -27,10 +28,25 @@
 
 <main>
 
-<section class="hero inner" style="padding-bottom:80px;">
+<section class="hero inner" style="padding-bottom:28px;">
   <div class="wrap">
-    <p class="eyebrow">Newsletter</p>
-    <h1>Coming soon.</h1>
+    <p class="eyebrow"><a href="resources.html">Resources</a> · Policy comparison table</p>
+    <h1>The majors, side by side.</h1>
+    <p class="lede" style="margin-top:14px;">
+      Three points are consistent everywhere: AI cannot be an author, authors remain fully
+      responsible for everything a tool produced, and undisclosed use can be treated as a
+      breach of policy. Beyond that, the rules genuinely differ, which is what this table shows.
+    </p>
+  </div>
+</section>
+
+<section style="padding-top:8px;">
+  <div class="wrap">
+    <div class="mx-wrap" id="matrix"></div>
+    <p style="margin-top:22px; font-size:14.5px; color:var(--ink-soft);">
+      For the full ruling on any row, with disclosure wording and what each venue screens,
+      look it up in the <a href="ai-register.html">AI policy register</a>.
+    </p>
   </div>
 </section>
 
@@ -53,10 +69,11 @@
         <a href="newsletter.html">Newsletter</a>
       </div>
     </div>
-    <p class="stamp">Site last updated · July 2026</p>
+    <p class="stamp">Register last updated · August 2026</p>
   </div>
 </footer>
 
+<script src="register-data.js"></script>
 <script src="register.js"></script>
 </body>
 </html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Policy Register · Research Integrity Office · NCBS</title>
+<meta name="description" content="Look up any journal's or publisher's policy on AI in research writing, figures and peer review — a register maintained and verified by the Research Integrity Office at NCBS.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <img src="assets/rio-logo.jpeg" alt="RIO logo">
+      <span class="brand-text"><strong>Research Integrity Office</strong><span>NCBS · Bengaluru</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu">Menu</button>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="resources.html" class="active">Resources</a>
+      <a href="events.html">Events</a>
+      <a href="newsletter.html">Newsletter</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero inner" style="padding-bottom:36px;">
+  <div class="wrap">
+    <p class="eyebrow"><a href="resources.html">Resources</a> · The AI policy register</p>
+    <h1>Where are you submitting?</h1>
+    <p class="lede" style="margin-top:14px;">
+      Every major venue now has rules on AI in research writing. Look yours up: what is
+      permitted, what must be disclosed and where the statement goes, what is prohibited,
+      and what your manuscript will be screened with.
+    </p>
+    <div class="reg-search">
+      <input id="register-search" type="search"
+        placeholder="Type a journal or publisher — Development, Scientific Reports, Elsevier…"
+        aria-label="Search journals and publishers" autocomplete="off">
+      <div id="register-suggest" class="sugg" hidden></div>
+    </div>
+    <div class="filters" role="group" aria-label="Filter by category">
+      <button class="filter-btn on" data-cat="all">All</button>
+      <button class="filter-btn" data-cat="publisher">Publishers</button>
+      <button class="filter-btn" data-cat="journal">Journals &amp; societies</button>
+      <button class="filter-btn" data-cat="preprint">Preprint servers</button>
+      <button class="filter-btn" data-cat="funder">Funders</button>
+      <button class="filter-btn" data-cat="standards">Standards bodies</button>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span class="chip ok">permitted with disclosure</span>
+      <span class="chip warn">restricted or conditional</span>
+      <span class="chip stop">prohibited</span>
+      <a class="jump" href="comparison.html">Policy comparison table &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:8px;">
+  <div class="wrap">
+    <div class="register-meta">
+      <span id="register-count"></span>
+      <button id="expand-all">Expand all</button>
+    </div>
+
+    <div id="register-list"></div>
+
+    <div class="disclaimer" style="margin-top:28px;">
+      These entries are the office&rsquo;s plain-language reading of each policy, compiled from
+      the publishers&rsquo; own documents. The linked source is always authoritative, and these
+      documents are revised frequently: verify before submission, and write to
+      <a href="mailto:rio@ncbs.res.in">rio@ncbs.res.in</a> if you find an entry that has
+      fallen out of date. Where a society journal sits on a large publisher&rsquo;s platform,
+      the journal&rsquo;s own guidelines may be stricter than the platform policy.
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <strong>Research Integrity Office</strong><br>
+        National Centre for Biological Sciences, Bengaluru
+      </div>
+      <div>
+        <a href="mailto:rio@ncbs.res.in">rio@ncbs.res.in</a><br>
+        080&nbsp;2366&nbsp;6229
+      </div>
+      <div>
+        <a href="resources.html">Resources</a><br>
+        <a href="events.html">Events</a><br>
+        <a href="newsletter.html">Newsletter</a>
+      </div>
+    </div>
+    <p class="stamp">Register last updated · August 2026</p>
+  </div>
+</footer>
+
+<script src="register-data.js"></script>
+<script src="register.js"></script>
+</body>
+</html>
