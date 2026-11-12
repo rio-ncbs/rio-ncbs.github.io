@@ -17,7 +17,7 @@
    same shape. Nothing in register.js needs to change.
    ============================================================ */
 
-const REGISTER_UPDATED = "August 2026";
+const REGISTER_UPDATED = "November 2026";
 
 /* ------------------------------------------------------------
    JOURNAL INDEX · maps journal titles to the register entry that
@@ -307,7 +307,7 @@ const POLICY_REGISTER = [
   forYou: "If your target journal is in medicine or the life sciences and its own policy is vague, assume ICMJE applies.",
   covers: "Underpins most medical and life-science journal policies worldwide",
   url: "https://www.icmje.org/recommendations/",
-  verified: "July 2026"
+  verified: "November 2026"
 },
 {
   org: "COPE",
@@ -344,16 +344,16 @@ const POLICY_REGISTER = [
   org: "UGC · theses",
   full: "University Grants Commission, thesis and dissertation context",
   cat: "standards",
-  verdict: "No AI-specific regulation yet · the 2018 plagiarism framework governs theses, and undisclosed AI text is being treated as plagiarism under it.",
-  chips: [{t:"Writing: 2018 rules govern",s:"warn"},{t:"Undisclosed AI: plagiarism",s:"stop"}],
-  writing: "The UGC (Promotion of Academic Integrity and Prevention of Plagiarism) Regulations, 2018 remain the governing framework for Indian theses: graded similarity levels with escalating penalties, mandatory screening, and Academic Misconduct Panels. The UGC has issued no formal AI amendment, but universities have begun applying the existing framework to AI-generated text, including rejecting theses where undisclosed AI-derived content pushed similarity beyond permitted levels. In the absence of a dedicated rule, undisclosed AI writing in a thesis sits in the worst of both worlds: permitted by no policy, and indefensible under the plagiarism framework.",
+  verdict: "Draft generative-AI guidelines are being finalised · until notified, the 2018 plagiarism framework governs theses, and universities are already returning theses over undisclosed AI text.",
+  chips: [{t:"Draft AI guidelines coming",s:"warn"},{t:"2018 rules govern today",s:"warn"},{t:"Undisclosed AI: plagiarism",s:"stop"}],
+  writing: "The UGC (Promotion of Academic Integrity and Prevention of Plagiarism) Regulations, 2018 remain the governing framework for Indian theses: graded similarity levels with escalating penalties, mandatory screening, and Academic Misconduct Panels. The UGC has issued no formal AI amendment, but universities have begun applying the existing framework to AI-generated text, including rejecting theses where undisclosed AI-derived content pushed similarity beyond permitted levels. In the absence of a dedicated rule, undisclosed AI writing in a thesis sits in the worst of both worlds: permitted by no policy, and indefensible under the plagiarism framework. As of November 2026 the UGC is finalising draft guidelines specifically on generative AI in research. Reported provisions permit AI for grammar correction, translation, code debugging and formatting; prohibit fabricated results, synthetic data and literature reviews generated without independent human analysis; require a disclosure statement in the methodology naming the software version, prompt parameters and scope of use; and attach tiered penalties, from revision within six months up to debarment and cancellation of doctoral registration, enforced through the Academic Integrity Panels of the 2018 regulations. Until the guidelines are notified, the 2018 framework remains the operative rule, and the UGC and universities have already begun returning theses and papers over undisclosed AI content.",
   images: "Not addressed by the 2018 regulations.",
   review: "Thesis evaluation practice varies by university; there is no national rule on examiner use of AI.",
   screening: "Similarity screening of theses is mandatory nationally; at NCBS this is the iThenticate check recorded on the pre-submission checklist.",
   forYou: "Your thesis is the one document no journal policy covers. The safe habit is the discipline the strict journals teach: polishing your own text is one thing, letting a model draft is another, and either way keep a record of what you used, because the framework that will judge the thesis was written before AI existed.",
   covers: "PhD and MSc theses at Indian higher educational institutions, including the TIFR deemed university",
   url: "https://www.ugc.gov.in/pdfnews/7771545_academic-integrity-Regulation2018.pdf",
-  verified: "August 2026"
+  verified: "November 2026"
 },
 
 /* ================= PUBLISHERS ================= */
@@ -376,16 +376,16 @@ const POLICY_REGISTER = [
   org: "Elsevier",
   full: "Elsevier journals · The Lancet family · Cell Press (separate entry)",
   cat: "publisher",
-  verdict: "Writing assistance permitted only to improve language and readability, declared in a dedicated statement before the references · AI-generated images prohibited · reviewers prohibited.",
-  chips: [{t:"Writing: language only",s:"warn"},{t:"Disclosure: dedicated statement",s:"warn"},{t:"Authorship: prohibited",s:"stop"},{t:"Images: prohibited",s:"stop"},{t:"Peer review: prohibited",s:"stop"}],
-  writing: "Narrower than most. Generative AI may be used in the writing process <strong>only to improve language and readability</strong>, not to generate content, argument or interpretation. Disclosure goes in a dedicated AI statement placed before the references (policy updated September 2025), not buried in the Acknowledgements. Spelling and grammar checkers integrated into word processors are exempt. Reference managers used without a generative option need no declaration, but if any AI tool selects, collates, generates or edits references that must be declared, and Elsevier warns explicitly that fabricated or hallucinated references may lead to rejection. Permitted supportive uses include summarising literature in preparation for writing, helping structure content, improving clarity, and checking a manuscript against guidelines.",
-  images: "Generative AI may not be used to create or alter images in a submitted manuscript. AI used within formal research design or methods is a separate matter and belongs in the Methods section, study design, code development or data analysis are explicitly not restricted by this policy.",
+  verdict: "Policy rewritten in August 2026: broader supportive uses allowed, declared in a separate AI declaration at submission · explanatory figures may use AI, primary research images may not · reviewers prohibited.",
+  chips: [{t:"Writing: declare at submission",s:"ok"},{t:"Authorship: prohibited",s:"stop"},{t:"Data images: prohibited",s:"stop"},{t:"Explanatory figures: allowed",s:"warn"},{t:"Peer review: prohibited",s:"stop"}],
+  writing: "Rewritten in August 2026 and notably more permissive than the earlier language-and-readability-only rule. AI may now support summarising literature, organising content, and improving clarity and language; authors must check outputs for accuracy, bias, completeness and fabricated references, and revise AI-assisted text so it reflects their own analysis. Disclosure moves to a <strong>separate AI declaration filed at submission</strong>, naming the tool, its purpose, and confirming the authors reviewed and edited the content. Basic spelling, grammar and punctuation checks need no declaration; substantive changes to structure, organisation or content do. AI used within research design, methods, data collection or analysis is described in the Methods section. Authors are also told to review a tool&rsquo;s terms before giving it unpublished manuscripts, research data or personal information, and fabricated or hallucinated references remain grounds for rejection.",
+  images: "No longer a flat prohibition. Explanatory images, flow charts, decision trees, timelines, schematics and workflow diagrams, may be prepared with AI support, and data visualisations are acceptable when directly derived from the underlying data by reproducible, clearly reported methods. What remains prohibited is creating or altering <strong>primary research images</strong>, microscopy, blots, radiology, patient images, to represent data not actually obtained in the research. General-purpose generative tools may not be used for graphical abstracts, and AI cover art needs prior permission from the journal editor and publisher. Any AI use in an image must also be disclosed in its caption, on top of the general declaration.",
   review: "Editors and reviewers must not upload manuscripts, or any part of them, into generative AI tools, on confidentiality grounds. The Lancet family maintains the same prohibition.",
   screening: "Check Integrity, expanded in March 2026 across nearly 2,000 Elsevier journals, screens submissions automatically for publishing-ethics breaches, unauthorised authorship changes, editorial conflicts of interest, routing flags to specialist integrity analysts rather than editors.",
-  forYou: "The 'language and readability only' line is the tightest of the majors, and the dedicated pre-references statement is a formatting requirement people routinely miss. Check every reference against the original source before submitting.",
+  forYou: "The August 2026 rewrite relaxed the old language-only line, but the separate submission declaration is now a formal step, and the caption-level disclosure for AI-touched figures is easy to miss. Check every reference against the original source before submitting.",
   covers: "Around 2,000 Elsevier journals including The Lancet family; Cell Press adds further restrictions",
   url: "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals",
-  verified: "July 2026"
+  verified: "November 2026"
 },
 {
   org: "Cell Press",
@@ -408,14 +408,14 @@ const POLICY_REGISTER = [
   cat: "publisher",
   verdict: "Disclosure with human accountability · AI cannot be an author · one of the largest automated screening stacks in publishing, running before peer review.",
   chips: [{t:"Writing: disclose",s:"ok"},{t:"Authorship: prohibited",s:"stop"},{t:"Screening: ~30 checks",s:"warn"}],
-  writing: "Wiley's best-practice guidelines on research integrity and publishing ethics require transparent disclosure of AI assistance and place accountability with the human authors. The framework applies across Wiley journals including the many society-owned titles published on the Wiley platform, but individual society journals may add their own requirements, so check the specific title.",
+  writing: "Wiley released comprehensive AI guidelines in October 2025, among the most detailed of the majors. Permitted support includes improving readability, grammar, translation, organising outlines, brainstorming, programming help and drafting tables; extra caution is asked wherever AI touches scientific interpretation, drawing conclusions, interpreting statistics or explaining causal relationships. AI cannot be an author, authors remain fully responsible, and Wiley asks for appropriate disclosure plus a record of which tools were used, for what purpose, when, and how the outputs were checked. The framework applies across Wiley journals including the many society-owned titles on the Wiley platform, and individual society journals may add their own requirements, so check the specific title.",
   images: "AI-generated or AI-altered images are treated as an integrity risk and must be disclosed; data images are expected to represent what was observed.",
-  review: "Reviewers are expected to preserve confidentiality and not upload manuscripts to external AI tools.",
+  review: "Reviewers are warned against uploading unpublished manuscripts to public AI tools on confidentiality grounds; limited AI help in improving the clarity of review comments is acknowledged, with the reviewer's independent judgement and responsibility unchanged.",
   screening: "Research Exchange Screening consolidates around 30 automated integrity checks into the submission workflow, Wiley's proprietary Papermill Detection tool plus third-party tools, running <em>before</em> peer review begins. The papermill service covers six areas: similarity to known paper-mill papers, problematic or 'tortured' phrase recognition, irregular author publishing patterns, researcher identity verification, generative-AI content detection, and journal-scope relevance. Wiley states flags go to an editor for closer consideration rather than triggering automatic rejection.",
   forYou: "Because Wiley publishes for hundreds of societies, the platform policy is the floor and the society journal's own guidelines may sit above it. Read the specific journal page, not just the Wiley hub.",
   covers: "Advanced Science, Small, Aggregate, InfoMat, Human Brain Mapping, Journal of Extracellular Vesicles, FEBS Press titles, Cochrane Library and many society journals",
   url: "https://authorservices.wiley.com/ethics-guidelines/index.html",
-  verified: "July 2026"
+  verified: "November 2026"
 },
 {
   org: "Taylor &amp; Francis",
@@ -453,14 +453,14 @@ const POLICY_REGISTER = [
   cat: "publisher",
   verdict: "AI does not qualify for authorship and journals actively screen author lists · disclose in the cover letter <em>and</em> the Methods or Acknowledgements.",
   chips: [{t:"Writing: disclose twice",s:"warn"},{t:"Authorship: screened",s:"stop"}],
-  writing: "Oxford Academic states that natural-language tools driven by AI do not qualify as authors, and that journals will screen author lists for them. Use of AI to help generate content, write code or process data should be disclosed both in the cover letter to editors and in the Methods or Acknowledgements section.",
+  writing: "Oxford Academic states that natural-language tools driven by AI do not qualify as authors, and that journals will screen author lists for them. Use of AI to help generate content, write code or process data should be disclosed both in the cover letter to editors and in the Methods or Acknowledgements section. Updated guidance (September 2026) stresses disclosure of significant AI use, author verification of AI-assisted material, and protection of unpublished work: check a tool&rsquo;s terms before giving it a manuscript, and avoid tools whose terms allow reuse or training without an opt-out.",
   images: "AI-generated images fall under the same disclosure requirement, with data-integrity expectations governed by each journal's figure guidelines.",
   review: "Standard confidentiality expectations apply to reviewers.",
   screening: "Text-similarity screening is routine; author-list screening for AI entries is explicitly stated.",
   forYou: "Two places, not one, the cover letter disclosure is the step most often forgotten at OUP titles.",
   covers: "Nucleic Acids Research, Bioinformatics, Briefings in Bioinformatics, Molecular Biology and Evolution, GigaScience, Brain Communications and the wider Oxford Academic list",
   url: "https://academic.oup.com/pages/authoring/journals/preparing_your_manuscript/ethics",
-  verified: "July 2026"
+  verified: "November 2026"
 },
 {
   org: "Cambridge University Press",
@@ -498,14 +498,14 @@ const POLICY_REGISTER = [
   cat: "publisher",
   verdict: "No AI co-authors · acknowledge AI-produced <em>or AI-edited</em> content, and describe it in Methods where applicable.",
   chips: [{t:"Writing: disclose",s:"ok"},{t:"Authorship: prohibited",s:"stop"}],
-  writing: "Generative AI may not be listed as an author or co-author. Written or visual content produced by, or edited using, generative AI must be acknowledged in the Acknowledgements section, and in the Methods where applicable.",
+  writing: "Generative AI may not be listed as an author or co-author. Written or visual content produced by, or edited using, generative AI must be acknowledged in the Acknowledgements section, and in the Methods where applicable. In April 2026 Frontiers added lifecycle-wide practical guidance built on its BE WISE principles (transparency, accountability, appropriate tool use, user awareness, integrity safeguards, equity), with permission-to-proceed checkpoints for authors, editors and reviewers and templates such as audit logs, framed as a living framework rather than a flat allowed-or-not rule.",
   images: "Visual content produced <em>or edited</em> with generative AI falls explicitly within the acknowledgement requirement, a broader phrasing than text-only policies.",
   review: "Standard confidentiality expectations.",
   screening: "Frontiers operates its own AI-assisted integrity screening across submissions.",
   forYou: "Note the phrase 'or edited using', editing an existing figure with an AI tool triggers disclosure here.",
   covers: "The Frontiers in… journal series",
   url: "https://www.frontiersin.org/guidelines/policies-and-publication-ethics",
-  verified: "July 2026"
+  verified: "November 2026"
 },
 
 {
@@ -664,16 +664,16 @@ const POLICY_REGISTER = [
   org: "JAMA Network",
   full: "JAMA and the JAMA Network journals",
   cat: "journal",
-  verdict: "Permitted with reporting of tool, version and use · no AI authors · reviewer use allowed only where confidentiality is assured.",
-  chips: [{t:"Writing: disclose",s:"ok"},{t:"Authorship: prohibited",s:"stop"},{t:"Peer review: conditional",s:"warn"}],
-  writing: "JAMA permits AI-assisted writing with reporting of the tool, its version, and how it was used; AI cannot be an author. JAMA sits at the more permissive end among medical journals while retaining full disclosure.",
-  images: "AI-generated images fall within disclosure requirements; data-image integrity expectations follow ICMJE norms.",
-  review: "Reviewers may use AI only in ways that preserve manuscript confidentiality, one of the few venues where reviewer use is conditionally permitted rather than banned outright.",
+  verdict: "Overhauled in late 2026: detailed disclosure with tool, version, manufacturer and dates · no AI for references, opinion pieces, letters or reviewer rebuttals · clinical images, video and audio prohibited · peer review use unacceptable.",
+  chips: [{t:"Writing: detailed disclosure",s:"ok"},{t:"References: no AI",s:"stop"},{t:"Clinical images: prohibited",s:"stop"},{t:"Peer review: prohibited",s:"stop"},{t:"Authorship: prohibited",s:"stop"}],
+  writing: "Updated in August 2026 and adopted across all 13 JAMA Network journals that October, partly in response to a surge of AI-drafted letters and opinion submissions. Grammar, syntax and spelling checks need no disclosure. Other uses, translation, rewriting for clarity, literature searches and summaries, generating analysis code, AI within study design, must be declared: research uses described in the Methods, plus an Acknowledgements disclosure giving the tool&rsquo;s name, version, manufacturer, dates of use, what it did and which parts of the manuscript were affected. Flat prohibitions now cover using AI to generate or format reference lists, to draft opinion pieces, letters to the editor or online comments, and to write responses to peer reviewers or editors. AI cannot be an author.",
+  images: "AI-generated or AI-manipulated clinical images, illustrations, video and audio are banned unless the AI tool is itself the subject of the research. Uniform whole-image adjustments remain acceptable with the software described in the legend and original unedited files provided. AI-made charts or graphs of original data are allowed if the software name and version appear in the legend.",
+  review: "Using AI for peer review is now unacceptable: reviewers and editors must not upload manuscript text, figures, or their own review summaries into generative AI tools.",
   screening: "Similarity and integrity screening in line with major medical publishers.",
-  forYou: "Note the contrast with Nature, Science, Elsevier and The Lancet, all of which prohibit reviewer AI use entirely.",
+  forYou: "JAMA moved from the permissive end to one of the strictest venues in a single revision. The reference-list rule is the trap: no AI-generated or AI-formatted citations at all, use a standard reference manager and check every reference yourself.",
   covers: "JAMA and the JAMA Network specialty journals",
   url: "https://jamanetwork.com/journals/jama/pages/instructions-for-authors",
-  verified: "July 2026"
+  verified: "November 2026"
 },
 {
   org: "The Lancet",
@@ -754,16 +754,16 @@ const POLICY_REGISTER = [
   org: "APA Publishing",
   full: "American Psychological Association journals",
   cat: "journal",
-  verdict: "Disclose AI use in the Methods section <em>and cite the model</em> · AI cannot be named an author.",
-  chips: [{t:"Writing: Methods + cite",s:"ok"},{t:"Authorship: prohibited",s:"stop"}],
-  writing: "When a generative AI model is used in drafting a manuscript for an APA publication, the use must be disclosed in the Methods section and cited. AI cannot be named as an author.",
-  images: "Disclosure requirements extend to generated visual material.",
-  review: "Confidentiality expectations apply.",
+  verdict: "A dedicated generative-AI policy (September 2026) with task-specific disclosure locations · AI cannot be named an author · editors and reviewers may not use AI on manuscripts.",
+  chips: [{t:"Writing: task-specific disclosure",s:"ok"},{t:"Authorship: prohibited",s:"stop"},{t:"Peer review: prohibited",s:"stop"}],
+  writing: "APA published a dedicated generative-AI policy in September 2026 with unusually specific disclosure locations by task: AI-assisted literature reviews disclose the prompts, keywords and tool in the Introduction; editing and translation are noted in the author note; AI used for coding or data analysis is specified in the Methods, including the number of iterations; and for figures and tables the prompts and tools are disclosed in the relevant Results section. AI cannot be named as an author, must be cited where used, and authors remain responsible for the accuracy of all content.",
+  images: "For figures and tables, the prompts and tools used must be disclosed in the relevant Results section.",
+  review: "Editors and reviewers may not use AI with submitted manuscripts, which would breach peer review confidentiality.",
   screening: "Standard similarity screening.",
-  forYou: "APA is one of the venues that asks you to <em>cite</em> the model, not merely mention it, follow their citation format for software.",
+  forYou: "APA now tells you exactly where each kind of disclosure goes, down to reporting your prompts for a literature review. Keep a log of prompts and tools as you work; reconstructing them at submission is painful.",
   covers: "APA journals",
   url: "https://www.apa.org/pubs/journals/resources/publishing-policies",
-  verified: "July 2026"
+  verified: "November 2026"
 },
 
 /* ================= PREPRINT SERVERS ================= */
@@ -789,31 +789,31 @@ const POLICY_REGISTER = [
   org: "ANRF · SERB",
   full: "Anusandhan National Research Foundation, incorporating the former Science and Engineering Research Board",
   cat: "funder",
-  verdict: "No stated policy on generative AI in proposals · the plagiarism rules are explicit, and they already reach AI-drafted text.",
-  chips: [{t:"Proposals: no AI policy yet",s:"warn"},{t:"Plagiarism: 5-year ban",s:"stop"}],
-  writing: "Proposals must be original, and plagiarism in any form is unacceptable. Applicants are asked to pre-check proposals for plagiarism before uploading; any verbatim text must be quoted and cited; and every PI must declare that they have not been penalised on scientific-ethics or plagiarism charges in the past five years. Generative AI is not mentioned anywhere in the guidance, which means AI-drafted text is governed by the ordinary originality rules: if a model reproduces someone else&rsquo;s words or ideas into your proposal, that is plagiarism, whoever typed it.",
+  verdict: "The first explicit AI rule from a major Indian funder: for the Advanced Research Grant, PIs sign an undertaking that the proposal is not AI-generated, and any AI-assisted text must be explicitly cited.",
+  chips: [{t:"ARG: not AI-generated, signed",s:"stop"},{t:"AI-assisted text: cite it",s:"warn"},{t:"Plagiarism: 5-year ban",s:"stop"}],
+  writing: "In May 2026 ANRF introduced mandatory integrity disclosures for its Advanced Research Grant: every PI and Co-PI signs an undertaking that the proposal is <strong>not AI-generated</strong>, any AI-assisted text must be explicitly cited, publication retractions from the previous five years must be disclosed with reasons, and proposals may face third-party plagiarism checks under a zero-tolerance policy. Across other schemes the SERB-era originality rules continue to govern: any verbatim text must be quoted and cited, and every PI declares that they have not been penalised on scientific-ethics or plagiarism charges in the past five years. Either way, if a model reproduces someone else&rsquo;s words or ideas into your proposal, that is plagiarism, whoever typed it.",
   images: "Not addressed.",
   review: "No public position on reviewer use of AI.",
   screening: "ANRF reserves the right to withdraw funding on confirmed ethics violations and to bar defaulters from applying for a minimum of five years, extendable with the severity of the case.",
-  forYou: "Until ANRF publishes an AI rule, the safe reading is that TIFR&rsquo;s own guidelines govern your use, and the existing plagiarism machinery already applies to anything a model wrote. As of August 2026, no major Indian funding agency has published an explicit generative-AI policy for proposals.",
+  forYou: "For an ARG application the undertaking makes AI drafting a signed representation, not a style question: draft the science yourself, cite any AI-assisted text explicitly, and expect the same standard to spread to other ANRF schemes.",
   covers: "ANRF schemes including the former SERB portfolio: Core Research Grant, Start-up Research Grant, MATRICS, national fellowships",
   url: "https://serb.gov.in/page/english/scientific_ethics_and_plagiarism",
-  verified: "August 2026"
+  verified: "November 2026"
 },
 {
   org: "Wellcome · UK funders joint statement",
   full: "Wellcome, UKRI, Cancer Research UK, NIHR, British Heart Foundation, Royal Society and others · the reference point for DBT/Wellcome India Alliance applicants",
   cat: "funder",
-  verdict: "Applicants may use generative AI if the outputs are acknowledged · reviewers may not put application content into AI tools at all.",
-  chips: [{t:"Proposals: acknowledge",s:"ok"},{t:"Peer review: prohibited",s:"stop"}],
-  writing: "A joint statement by eight major UK research funders (September 2023), including Wellcome and UKRI, permits responsible use of generative AI in funding applications on the condition that any outputs from such tools are acknowledged, with individual funders free to add stricter scheme-level rules of their own.",
+  verdict: "Wellcome now has a policy of its own: declare substantive AI use on the application form, minimal language help exempt · reviewers may not put application content into AI tools at all.",
+  chips: [{t:"Proposals: declare substantive use",s:"ok"},{t:"Language help: exempt",s:"ok"},{t:"Peer review: prohibited",s:"stop"}],
+  writing: "Beyond the September 2023 joint statement of eight UK funders, Wellcome now maintains its own grant-application policy (last updated April 2026). Substantive uses, idea development, data or literature analysis, code generation, abstract generation, must be declared on the application form; minimal uses such as translating into or improving English and formatting need no declaration. AI must not be used to fabricate data, plagiarise, fake citations, or generate an application or whole sections of one without human involvement, and confidential or personal data must not be put into AI tools. Applicants remain responsible for removing hallucinated content.",
   images: "Not separately addressed.",
-  review: "Categorical: peer reviewers must not input content from confidential funding applications or reviews into generative AI tools, nor use such tools to develop their critiques, on confidentiality and expertise grounds.",
+  review: "Categorical: reviewers and committee members must not enter application content into generative AI tools, nor use them to develop critiques. Side tasks involving no application content, checking whether work already exists, refining language, are permitted with outputs verified. Wellcome itself does not use generative AI to assess applications.",
   screening: "Compliance runs through each funder&rsquo;s own assurance processes.",
-  forYou: "The India Alliance (DBT/Wellcome) has published no AI policy of its own as of August 2026, so Wellcome&rsquo;s standard is the sensible reference for its fellows and applicants: acknowledge AI use in an application, and if you review for any funder, keep the application out of every AI tool.",
+  forYou: "The India Alliance (DBT/Wellcome) has published no AI policy of its own as of November 2026, so Wellcome&rsquo;s standard is the sensible reference for its fellows and applicants: declare substantive AI use on the form, and if you review for any funder, keep the application out of every AI tool.",
   covers: "Wellcome and UK funder applications; the practical reference for DBT/Wellcome India Alliance fellowships",
-  url: "https://wellcome.org/about-us/positions-and-statements/joint-statement-generative-ai",
-  verified: "August 2026"
+  url: "https://wellcome.org/grant-funding/guidance/policies-grant-conditions/use-of-generative-ai",
+  verified: "November 2026"
 },
 {
   org: "ICMR",
@@ -834,16 +834,16 @@ const POLICY_REGISTER = [
   org: "NIH",
   full: "U.S. National Institutes of Health",
   cat: "funder",
-  verdict: "Generative AI is prohibited outright in NIH peer review, uploading application content breaches confidentiality.",
-  chips: [{t:"Peer review: prohibited",s:"stop"}],
-  writing: "NIH's restriction targets the review process rather than authorship of publications.",
+  verdict: "Prohibited outright in NIH peer review since 2023 · and from September 2025, applications substantially developed by AI are not accepted as the applicant&rsquo;s original ideas, with a cap of six applications per PI per year.",
+  chips: [{t:"Peer review: prohibited",s:"stop"},{t:"Applications: no AI drafting",s:"stop"},{t:"Cap: 6 applications/year",s:"warn"}],
+  writing: "Notice NOT-OD-25-132 (July 2025) extends NIH&rsquo;s reach from review to application: proposals substantially developed by AI are not considered the applicant&rsquo;s own original ideas, detection can lead to referral under research misconduct procedures, and from 25 September 2025 a PI may submit at most six new applications per calendar year, a cap aimed at AI-enabled mass submission. A June 2026 NIH reminder restates the integrity expectations for AI across applying, managing awards and conducting research.",
   images: "Not addressed by this notice.",
   review: "Notice NOT-OD-23-149 (June 2023) bars reviewers from using natural-language processors, large language models or other generative AI to analyse or critique grant applications and contract proposals, on the grounds that uploading their content to online tools violates the confidentiality reviewers agree to.",
   screening: "NIH-funded work remains subject to the ORI framework on research misconduct, fabrication, falsification, plagiarism.",
-  forYou: "If you review for NIH, the rule is absolute: nothing from an application goes into any AI tool.",
-  covers: "NIH peer review and contract proposal review",
+  forYou: "Both ends are now covered: nothing from an application goes into any AI tool when you review, and your own application must be your own ideas, with AI assistance kept well short of substantially developing the proposal.",
+  covers: "NIH applications, peer review and contract proposal review",
   url: "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-23-149.html",
-  verified: "July 2026"
+  verified: "November 2026"
 },
 {
   org: "NSF",
